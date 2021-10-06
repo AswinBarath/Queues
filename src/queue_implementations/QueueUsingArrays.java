@@ -13,7 +13,7 @@ public class QueueUsingArrays {
 
 	public QueueUsingArrays(int size) {
 		this.capacity = size;
-		front = rear = -1;
+		front = rear = 0;
 		queue = new int[capacity];
 	}
 
