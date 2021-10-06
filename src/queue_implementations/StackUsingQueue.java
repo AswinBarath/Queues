@@ -5,7 +5,7 @@ package queue_implementations;
  */
 
 public class StackUsingQueue {
-	 // T.C & S.C => O(N)
+	// T.C & S.C => O(N)
 	int queue[];
 	int front;
 	int rear;
@@ -27,20 +27,20 @@ public class StackUsingQueue {
 		queue[rear % capacity] = data;
 		rear++;
 		elementCount++;
-		for(int i = 0; i < elementCount - 1; i++) {			
+		for (int i = 0; i < elementCount - 1; i++) {
 			queue[rear % capacity] = pop();
 			rear++;
 			elementCount++;
-			/* Use this code snippet to check internal status */
-//			System.out.println("--");
-//			for(int ele : queue) {
-//				System.out.print(ele + ", ");
-//			}
-//			System.out.println();
-//			System.out.println("front="+(front%capacity));
-//			System.out.println("rear="+(rear%capacity));
-//			System.out.println("--");
-			/* Use this code snippet to check internal status */
+			/* Use this code snippet to check internal status 
+			System.out.println("--");
+			for(int ele : queue) {
+				System.out.print(ele + ", ");
+			}
+			System.out.println();
+			System.out.println("front="+(front%capacity));
+			System.out.println("rear="+(rear%capacity));
+			System.out.println("--");
+			// Use this code snippet to check internal status */
 		}
 	}
 
@@ -66,10 +66,10 @@ public class StackUsingQueue {
 	boolean isEmpty() {
 		return elementCount == 0;
 	}
-	
+
 	public void print() {
 		System.out.print("top->");
-		for(int i = front; i < rear; i++) {
+		for (int i = front; i < rear; i++) {
 			System.out.println(queue[i % capacity]);
 		}
 	}
